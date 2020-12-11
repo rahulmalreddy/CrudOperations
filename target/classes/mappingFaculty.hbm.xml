@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+          
+ <hibernate-mapping>
+ 
+<class name = "manyToMany.Faculty" table = "Faculty">
+<id name = "fid">
+
+</id>
+<property name = "fname"></property>
+<property name= "fexp"></property>
+
+<set name = "course" table = "FacultyCourse" inverse="false" lazy="true" fetch="select" cascade="all">
+<key column = "fid"></key>
+<many-to-many class = "manyToMany.Course" column ="cid">
+</many-to-many>
+
+</set>
+
+
+</class>
+
+ 
+ 
+ </hibernate-mapping>

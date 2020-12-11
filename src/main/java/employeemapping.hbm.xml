@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+    <hibernate-mapping>
+    
+    <class name = "Rahul.maven.CrudOperations.Employee" table = "Employee" >
+      <id name = "eid" type= "int" column ="empid">   
+      <generator class="sequence"> </generator>  </id>
+   
+      <property name = "ename" column = "name" type ="string"></property>
+       <property name = "edepartment" column = "Department" type = "string"></property>
+        <property name = "esalary" column = "salary" type = "int" ></property>
+        <property name = "year" column ="year"></property>
+      
+      
+    
+    
+    </class>
+    
+    </class>
+    
+    
+    
+    </hibernate-mapping>
